@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import JournalList from "./components/JournalList";
+import JournalList from "./JournalList";
 import JournalForm from "./JournalForm";
+import Loading from "./Loading";
 
 function App() {
   const [entries, setEntries] = useState([]);
@@ -12,7 +13,10 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         // add important flag to each entry
-        const enrichedData = data.map((entry) => ({ ...entry, important: false }));
+        const enrichedData = data.map((entry) => ({
+          ...entry,
+          important: false,
+        }));
         setEntries(enrichedData);
         setLoading(false);
       })
@@ -43,7 +47,7 @@ function App() {
       {showForm && <JournalForm addEntry={addEntry} />}
 
       {loading ? (
-        <p>Loading journal entries...</p>
+        <Loading message="Loading journal entries..." />
       ) : (
         <JournalList entries={entries} toggleImportant={toggleImportant} />
       )}

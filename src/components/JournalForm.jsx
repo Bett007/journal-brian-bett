@@ -52,7 +52,8 @@ function JournalForm({ addEntry }) {
         />
       </div>
       <button type="submit" disabled={submitting}>
-        {submitting ? "Submitting..." : "Add Entry"}
+        /* {submitting ? "Submitting..." : "Add Entry"} */
+        {submitting && <Loading message="Submitting your entry..." />}
       </button>
     </form>
   );
