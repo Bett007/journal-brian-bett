@@ -1,18 +1,20 @@
 .journal-card {
-  background-color: white;
-  border-radius: 8px;
-  padding: 15px 20px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.1s ease-in-out;
+  background-color: #fff;           /* white background */
+  border: 1px solid #ddd;           /* light gray border for bounding box */
+  border-radius: 12px;              /* rounded corners */
+  padding: 15px 20px;               /* space inside the card */
+  margin-bottom: 15px;              /* space between cards */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
 .journal-card:hover {
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* slightly lift on hover */
 }
 
 .journal-card.important {
-  border-left: 5px solid #fbc02d; /* highlight important entries */
+  border-left: 5px solid #fbc02d; /* yellow highlight for important */
 }
 
 .journal-card h3 {
@@ -26,5 +28,12 @@
 .journal-card p {
   margin: 0;
   color: #555;
-  line-height: 1.4;
+  line-height: 1.5;
+}
+
+.journal-card button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
 }
