@@ -1,16 +1,108 @@
-# React + Vite
+# Journal App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **Journal App** built with **React** that allows users to **view, create, and manage journal entries**. Entries are displayed as cards and can be marked as important. This app uses the **JSONPlaceholder API** for fetching and posting data.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## React Compiler
+> *(Optional: add a screenshot or GIF of your app here)*
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✅ **Core Features:**  
+
+- View existing journal entries (fetched from JSONPlaceholder)  
+- Add a new journal entry (with **title** and **body**)  
+- Mark entries as **important**  
+- Loading state displayed while fetching/submitting data  
+- Responsive **card layout** with two-column grid  
+
+💡 **Extra Features (Optional/Advanced):**  
+
+- Delete journal entries  
+- Edit journal entries  
+- Filter to show only important entries  
+
+---
+
+## Technologies Used
+
+- **React** (Functional Components & Hooks)  
+- **CSS Grid** for responsive layout  
+- **JSONPlaceholder API** for data simulation  
+- **Vite** for project scaffolding  
+
+---
+
+## Project Structure
+
+journal-brian-bett/  
+├── src/  
+│   ├── components/  
+│   │   ├── JournalList.jsx  
+│   │   ├── JournalItem.jsx  
+│   │   ├── JournalForm.jsx  
+│   │   └── Loading.jsx  
+│   ├── css/  
+│   │   └── App.css  
+│   ├── App.jsx  
+│   └── main.jsx  
+├── package.json  
+├── vite.config.js  
+└── README.md  
+
+---
+
+## Installation
+
+1. **Clone the repository**  
+```git clone <your-repo-url>```
+2. **Navigate into the project folder**  
+```cd journal-brian-bett```
+3. **Install dependencies**  
+```npm install```
+4. **Run the app**  
+```npm run dev```
+5. Open your browser at the URL shown in the terminal (usually `http://localhost:5173`)  
+
+---
+
+## How to Use
+
+1. Click **"Add New Entry"** to open the form  
+2. Fill in the **Title** and **Body** fields  
+3. Click **"Add Entry"** to submit (client-side validation requires both fields)  
+4. Click the **star icon** on a card to mark it as important  
+5. Loading states are shown when fetching or submitting entries  
+
+---
+
+## Styling
+
+- **Cards** for each journal entry with **rounded corners, shadows, and spacing**  
+- **Two-column responsive layout** on desktop, adjusts to single column on smaller screens  
+- Form styled as a **card** to match entries  
+
+---
+
+## Future Enhancements
+
+- Add **delete** and **edit** functionality via API calls  
+- Add **filter by important entries**  
+- Persistent data storage (instead of temporary JSONPlaceholder)  
+
+---
+
+## Author
+
+**Brian Bett** – Bootcamp Student at Moringa School  
+
+---
+
+## License
+
+This project is for educational purposes and not for commercial use.
+
