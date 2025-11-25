@@ -4,12 +4,6 @@ A simple **Journal App** built with **React** that allows users to **view, creat
 
 ---
 
-## Demo
-
-> *(Optional: add a screenshot or GIF of your app here)*
-
----
-
 ## Features
 
 ✅ **Core Features:**  
@@ -59,13 +53,21 @@ journal-brian-bett/
 ## Installation
 
 1. **Clone the repository**  
-```git clone <your-repo-url>```
+```
+git clone <your-repo-url>
+```
 2. **Navigate into the project folder**  
-```cd journal-brian-bett```
+```
+cd journal-brian-bett
+```
 3. **Install dependencies**  
-```npm install```
+```
+npm install
+```
 4. **Run the app**  
-```npm run dev```
+```
+npm run dev
+```
 5. Open your browser at the URL shown in the terminal (usually `http://localhost:5173`)  
 
 ---
