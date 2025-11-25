@@ -1,11 +1,17 @@
 function JournalItem({ entry, toggleImportant }) {
   return (
-    <div
-      className={`journal-item ${entry.important ? "important" : ""}`}
-    >
+    <div className={`journal-card ${entry.important ? "important" : ""}`}>
       <h3>
-        {entry.title}{" "}
-        <button onClick={() => toggleImportant(entry.id)}>
+        {entry.title}
+        <button
+          onClick={() => toggleImportant(entry.id)}
+          style={{
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+            fontSize: "18px",
+          }}
+        >
           {entry.important ? "⭐" : "☆"}
         </button>
       </h3>
