@@ -52,9 +52,9 @@ journal-brian-bett/
 
 ## Installation
 
-1. **Clone the repository**  
+1. **Clone the repository** ***(SHH option)*** 
 ```
-git clone <your-repo-url>
+git clone git@github.com:Bett007/journal-brian-bett.git
 ```
 2. **Navigate into the project folder**  
 ```
