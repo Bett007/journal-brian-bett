@@ -4,7 +4,7 @@ function JournalList({ entries, toggleImportant }) {
   if (entries.length === 0) return <p>No journal entries yet!</p>;
 
   return (
-    <div>
+    <div className="journal-list">
       {entries.map((entry) => (
         <JournalItem
           key={entry.id}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Loading from "./Loading";
 
 function JournalForm({ addEntry }) {
   const [title, setTitle] = useState("");
@@ -52,9 +53,9 @@ function JournalForm({ addEntry }) {
         />
       </div>
       <button type="submit" disabled={submitting}>
-        /* {submitting ? "Submitting..." : "Add Entry"} */
-        {submitting && <Loading message="Submitting your entry..." />}
+        {submitting ? "Submitting..." : "Add Entry"}
       </button>
+      {submitting && <Loading message="Submitting your entry..." />}
     </form>
   );
 }

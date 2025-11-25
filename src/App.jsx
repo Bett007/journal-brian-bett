@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import JournalList from "./JournalList";
-import JournalForm from "./JournalForm";
-import Loading from "./Loading";
+import JournalList from "./components/JournalList";
+import JournalForm from "./components/JournalForm";
+import Loading from "./components/Loading";
+import "./css/App.css";
 
 function App() {
   const [entries, setEntries] = useState([]);
@@ -12,11 +13,7 @@ function App() {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => res.json())
       .then((data) => {
-        // add important flag to each entry
-        const enrichedData = data.map((entry) => ({
-          ...entry,
-          important: false,
-        }));
+        const enrichedData = data.map((entry) => ({ ...entry, important: false }));
         setEntries(enrichedData);
         setLoading(false);
       })
@@ -44,6 +41,7 @@ function App() {
         {showForm ? "Close Form" : "Add New Entry"}
       </button>
 
+      {/* The form should render here */}
       {showForm && <JournalForm addEntry={addEntry} />}
 
       {loading ? (
