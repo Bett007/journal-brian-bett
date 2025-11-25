@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import JournalList from "./components/JournalList";
-import JournalForm from "./components/JournalForm";
+import JournalForm from "./JournalForm";
 
 function App() {
   const [entries, setEntries] = useState([]);
