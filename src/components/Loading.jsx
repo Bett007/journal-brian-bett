@@ -1,7 +1,12 @@
 function Loading({ message = "Loading..." }) {
   return (
-    <div style={{ textAlign: "center", padding: "20px", fontSize: "18px" }}>
-      <p>{message}</p>
+    <div style={{
+      textAlign: "center",
+      padding: "50px",
+      fontSize: "18px",
+      fontWeight: "bold"
+    }}>
+      {message}
     </div>
   );
 }

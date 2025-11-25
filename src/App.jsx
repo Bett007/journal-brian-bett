@@ -10,14 +10,20 @@ function App() {
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((res) => res.json())
-      .then((data) => {
-        const enrichedData = data.map((entry) => ({ ...entry, important: false }));
-        setEntries(enrichedData);
-        setLoading(false);
-      })
-      .catch((err) => console.error(err));
+    // simulate slow fetch
+    setTimeout(() => {
+      fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((res) => res.json())
+        .then((data) => {
+          const enrichedData = data.map((entry) => ({
+            ...entry,
+            important: false,
+          }));
+          setEntries(enrichedData);
+          setLoading(false);
+        })
+        .catch((err) => console.error(err));
+    }, 600); // 500ms delay
   }, []);
 
   const toggleForm = () => setShowForm(!showForm);
@@ -41,7 +47,6 @@ function App() {
         {showForm ? "Close Form" : "Add New Entry"}
       </button>
 
-      {/* The form should render here */}
       {showForm && <JournalForm addEntry={addEntry} />}
 
       {loading ? (
