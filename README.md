@@ -33,20 +33,22 @@ A simple **Journal App** built with **React** that allows users to **view, creat
 
 ## Project Structure
 
-journal-brian-bett/  
-├── src/  
-│   ├── components/  
-│   │   ├── JournalList.jsx  
-│   │   ├── JournalItem.jsx  
-│   │   ├── JournalForm.jsx  
-│   │   └── Loading.jsx  
-│   ├── css/  
-│   │   └── App.css  
-│   ├── App.jsx  
-│   └── main.jsx  
-├── package.json  
-├── vite.config.js  
-└── README.md  
+```text
+journal-brian-bett/
+├── src/
+│   ├── components/
+│   │   ├── JournalList.jsx
+│   │   ├── JournalItem.jsx
+│   │   ├── JournalForm.jsx
+│   │   └── Loading.jsx
+│   ├── css/
+│   │   └── App.css
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+├── vite.config.js
+└── README.md
+```  
 
 ---
 
